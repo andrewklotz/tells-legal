@@ -31,7 +31,7 @@
 <body>
 
 <h1>Tells — Privacy Policy</h1>
-<p class="date">Effective date: August 11, 2026</p>
+<p class="date">Effective date: October 14, 2026 (first published August 11, 2026)</p>
 
 <div class="summary">
   <strong>The short version:</strong> Tells has no accounts, no ads, no analytics,
@@ -57,19 +57,26 @@ never transmitted to us:</p>
 the app at any time (for example, deleting slips or removing your photo).</p>
 
 <h2>3. Information that leaves your device</h2>
-<p>To do its job, the app talks directly to a small number of third-party
-services. As with any internet connection, those services can see standard
-connection data (such as your IP address). The app sends them no name, account,
-or advertising identifier:</p>
+<p>To do its job, the app talks to a small number of third-party services. As
+with any internet connection, those services can see standard connection data
+(such as your IP address). The app sends them no name, account, or advertising
+identifier:</p>
 <ul>
   <li><strong>The Odds API</strong> — requests for live scores, schedules, and
       betting odds. Requests describe games and sports, not you.</li>
-  <li><strong>ESPN, CBS Sports, and BettingPros</strong> — sports news articles,
-      team logos, and images are fetched from their servers.</li>
+  <li><strong>ESPN, CBS Sports, and BettingPros</strong> — live scores, sports
+      news articles, team logos, and images are fetched from their servers.</li>
   <li><strong>Anthropic (Claude API)</strong> — only when you use slip scanning
-      (the slip image you select is sent to extract bet details) or article
-      summaries (article text is sent to generate the summary). We do not store
-      these on any server of ours.</li>
+      or article summaries. When you scan a slip, the app reads the screenshot on
+      your device and sends only the text it finds (the stake, odds, and picks,
+      and anything else visible in the screenshot) to fill in your slip. The
+      screenshot itself never leaves your device. For a summary, the article's
+      text is sent. Anthropic keeps these requests for up to 30 days under its
+      own privacy policy.</li>
+  <li><strong>Cloudflare</strong> — requests to The Odds API and Anthropic pass
+      through a small server of ours on Cloudflare, which adds the app's API
+      keys. It keeps no copy of what passes through it and does not store your
+      IP address.</li>
   <li><strong>Google's favicon service</strong> — small sportsbook logo images.</li>
 </ul>
 <p>Each provider processes data under its own privacy policy.</p>
@@ -77,7 +84,9 @@ or advertising identifier:</p>
 <h2>4. Photos</h2>
 <p>Photos are accessed through the system photo picker, which runs outside the
 app — the app only ever receives the specific images you choose (a slip to scan,
-or a profile photo). Your profile photo is stored on your device only.</p>
+or a profile photo). A slip screenshot is read on your device and is not
+uploaded; only the text found in it is sent (see section 3). Your profile photo
+is stored on your device only.</p>
 
 <h2>5. No tracking</h2>
 <p>The app contains no advertising, no analytics or tracking SDKs, and does not
